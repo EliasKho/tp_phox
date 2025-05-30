@@ -1,14 +1,19 @@
 import photoloader from "./lib/photoloader.js";
+import ui from "./lib/ui.js";
 
 function getPicture(id){
     let promise = photoloader.loadPicture(id);
-    promise.then(p=>{
-        console.log(p.photo.titre);
-        console.log(p.photo.type);
-        console.log(p.photo.descr);
+    promise.then(image=>{
+        // console.log(image.photo.titre);
+        // console.log(image.photo.type);
+        // console.log(image.photo.descr);
+
+        ui.displayPicture(image);
     })}
 
 getPicture(window.location.hash ? window.location.hash.substr(1): 105);
+
+
 
 /*
 photo 105 :
