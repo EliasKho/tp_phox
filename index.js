@@ -9,9 +9,20 @@ function getPicture(id){
         // console.log(image.photo.descr);
 
         ui.displayPicture(image);
+        ui.displayCategorie(getCategorie(image));
+        ui.displayComments(getComments(image));
     })}
 
+function getCategorie(image){
+    return photoloader.loadRessource('https://webetu.iutnc.univ-lorraine.fr'+image.links.categorie.href);
+}
+
+function getComments(image){
+    return photoloader.loadRessource('https://webetu.iutnc.univ-lorraine.fr'+image.links.comments.href);
+}
+
 getPicture(window.location.hash ? window.location.hash.substr(1): 105);
+
 
 
 

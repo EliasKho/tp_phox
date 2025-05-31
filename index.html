@@ -14,11 +14,11 @@
 </main>
 
 <script id="photoTemplate" type="text/x-handlebars-template">
-  <img src="https://webetu.iutnc.univ-lorraine.fr/{{photo.url.href}}" alt="{{photo.titre}}">
+  <img src="https://webetu.iutnc.univ-lorraine.fr{{photo.url.href}}" alt="{{photo.titre}}">
   <h4>{{photo.titre}}</h4>
   <p>{{photo.descr}}</p>
   <p>{{photo.format}}, {{photo.width}} x {{photo.height}}</p>
-  <h4 id="la_categorie">categorie : <a href="{{links.categorie.href}}">{{links.categorie.href}}</a></h4>
+  <h4 id="la_categorie">categorie : {{links.categorie.href}}</h4>
   <h4>commentaires :</h4>
   <ul id="les_commentaires">
   </ul>
